@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веселая музыка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <img src="mountain.png" alt="Mountain" class="mountain">
+        <div class="donkey-container">
+            <img src="donkey.png" alt="Donkey" class="donkey">
+        </div>
+    </div>
+
+    <!-- Фоновая музыка -->
+    <audio autoplay loop>
+        <source src="happy-music.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
