@@ -1,0 +1,9 @@
+let donkey = document.querySelector('.donkey-container');
+
+donkey.addEventListener('animationiteration', () => {
+    // Перезапускаем анимацию с нуля, чтобы ослик продолжал бегать по экрану
+    donkey.style.animation = 'none';
+    setTimeout(() => {
+        donkey.style.animation = '';
+    }, 0);
+});
