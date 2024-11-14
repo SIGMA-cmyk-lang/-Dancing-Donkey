@@ -1,0 +1,31 @@
+from PIL import Image, ImageDraw
+
+# Создаем новое изображение размером 100x100 пикселей с белым фоном
+img = Image.new('RGB', (100, 100), color='white')
+draw = ImageDraw.Draw(img)
+
+# Рисуем тело ослика (серое овальное тело)
+draw.ellipse([20, 30, 80, 80], fill='gray')
+
+# Рисуем голову ослика (серое овальное лицо)
+draw.ellipse([35, 10, 65, 40], fill='gray')
+
+# Рисуем глаза ослика (черные круги)
+draw.ellipse([45, 20, 50, 25], fill='black')
+draw.ellipse([55, 20, 60, 25], fill='black')
+
+# Рисуем рот (черная линия)
+draw.line([50, 35, 50, 40], fill='black', width=2)
+
+# Рисуем ушки ослика
+draw.polygon([ [40, 10], [45, 0], [50, 10] ], fill='gray')  # левое ухо
+draw.polygon([ [50, 10], [55, 0], [60, 10] ], fill='gray')  # правое ухо
+
+# Рисуем хвост (коричневый)
+draw.line([80, 65, 95, 75], fill='brown', width=3)
+
+# Сохраняем изображение
+img.save('donkey.png')
+
+# Показываем изображение
+img.show()
